@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body
+{
+    font-family: 'Quicksand', sans-serif;
+}
+
+table, th, td {
+    border: 1px solid black;
+    
+}
+table, tr{
+    width: 100%;
+    algin: "center";
+}
