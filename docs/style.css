@@ -3,7 +3,8 @@
 body
 {
     font-family:        'Quicksand', sans-serif;
-    background-color:   #FF8C00;
+    background-color:   #8A2432;
+    color:         white;
 
 }
 
@@ -37,3 +38,48 @@ button {
     width: 90%;
     padding: 10px;
 }
+
+#myTable {
+    .table, th, td {
+        border: 1px solid black;
+        vertical-align: center;
+        text-align: left;
+        height:100%;
+    }
+    .table, tr{
+        width: 100%;
+        algin: "center";
+        height:100%;
+    }
+}
+
+#myAbstract
+{
+    display:none;
+}
+#myIntroduction
+{
+    display:none;
+}
+#myASearch
+{
+    display:none;
+}#myTechnology
+{
+    display:none;
+}
+#myObstacle
+{
+    display:none;
+}
+#myConclusion
+{
+    display:none;
+}
+#myReferences
+{
+    display:none;
+}
+
+
+
