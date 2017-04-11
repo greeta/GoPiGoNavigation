@@ -4,7 +4,7 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="functions.js"></script>
 </head>
-<img src="GoPiGo.png" alt="GoPiGo Top" style="width:100%;height:300px;">
+<img src="pictures/GoPiGo.png" alt="GoPiGo Top" style="width:100%;height:300px;">
 <div class="center">
 <body>
 <table>
@@ -78,7 +78,7 @@
                 In looking for an optimal algorithm for path finding, researchers have developed the A* algorithm, a double-valued graph search algorithm that is guaranteed to return an optimal path granted that it is grented that it meets specific requirements.
                 A* takes a graph that has a cost function, f<sub>c</sub>(x) (or simply f(x)) - a numerical cost to travel from one node to another - as well as a heuristic function, f<sub>h</sub>(x) (or simply h(x)) - a function that measures, in some way, the closeness of a node to its desired final state. By minimizing the value, of f(x) + h(x) , A* is garunteed to return a path that is optimal , given that the heuristic function does not over-estimate the closeness to completion. Others have used A* to evaluate an optimal way of completing the classic sliding-picture puzzle by using f(x)=1 and h(x) = &sum; d<sub>i</sub>, where d<sub>i</sub> = Manhattan Distance of puzzle piece i from its final position. Given our purpose in our experiment ( as well as research published by Google on the topic) we define our functions as follows:<br/><br/>
                 
-                    <center><img src="A*Algorithm.png" alt="Algorithm pic" style="width:30%;height:80%;"></center>
+                    <center><img src="pictures/AStarAlgorithm.png" alt="Algorithm pic" style="width:30%;height:80%;"></center>
                     <br/>
                     where (x<sub>i</sub>, y<sub>i</sub>) is the x and y coordinates of the i-th node, and c,n,f designates the current, next, and final nodes respectively.
                     In layman's terms, the cost function is equal to the Euclidan Distance between the current node and the next node (or, the distance between two positions on the map), and the heuristic function is equal to the Eulidean Distance between the next node and the final node (or, the distance between the neext position on the map and the final position on the map). By defining these functions in this manner, our A* algorithm is garunteed to return an optimal path from one point to another.'
