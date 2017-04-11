@@ -32,6 +32,12 @@ button {
     text-shadow:   none;
     width:         100%;
 }
+object{
+    width:         100%;
+    height:        100%;
+    background-color: white;
+    border: 10px ridge #ccc;
+}
 
 .center {
     margin: auto;
@@ -52,34 +58,4 @@ button {
         height:100%;
     }
 }
-
-#myAbstract
-{
-    display:none;
-}
-#myIntroduction
-{
-    display:none;
-}
-#myASearch
-{
-    display:none;
-}#myTechnology
-{
-    display:none;
-}
-#myObstacle
-{
-    display:none;
-}
-#myConclusion
-{
-    display:none;
-}
-#myReferences
-{
-    display:none;
-}
-
-
 
