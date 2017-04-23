@@ -48,14 +48,34 @@ def test_passable_00():
 # def test_passable_01():
 # when there are walls to test come back here
 
-# returns all available adjacent (x,y) --in map and no walls
+# neighbors - returns available adjacents(x,y) --in map and no walls
 # with no preset it should return 4 coordinates hence the length test
-def test_neighbors():
+def test_neighbors_totalNum():
 	test = astar.graph(100, 50)
 	dummyCoor = (42, 42)
 	neighbors = test.neighbors(dummyCoor)
 	assert len(neighbors) == 4
+
+def test_neighbors_invalidNeighbor():
+	test = astar.graph(100, 50)
+	dummyCoor = (42, 42)
+	neighbors = test.neighbors(dummyCoor)
 	assert (42,46) not in neighbors, "(42, 46) cannot be adjacent"
+
+# cost - scales the effort to go from point A to B
+# clearly easier to go x0 hence gotta be cheaper
+def test_cost():
+	test = astar.graph(100, 50)
+	cur = (0, 0)
+	xy0 = (5, 5)
+	xy1 = (49, 49) #dummy coor.s
+	test.weights = {cur : 0, xy0 : 25, xy1 : 49 * 49} #dummy weights
+	cost_to_xy0 = test.cost(cur, xy0)
+	cost_to_xy1 = test.cost(cur, xy1)	
+	assert cost_to_xy1 > cost_to_xy0
+
+
+
 
 
 

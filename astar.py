@@ -5,7 +5,7 @@ class graph: # _new_=regularconst vs _init_ =+ add-on manip. before creat.
         self.width = width
         self.height = height
         self.walls = []         # [] > list 
-        self.weights = {}       # {} > set - no dublicates 
+        self.weights = {}       # {} > dic['key' : 'value']- no dublicates 
 
     #checks if any pair of x,y is within our map/limits
     def in_bounds(self, id):
@@ -25,6 +25,7 @@ class graph: # _new_=regularconst vs _init_ =+ add-on manip. before creat.
         results = filter(self.passable, results)
         return results
 
+    # scales the effort to go from point A to B
     def cost(self, from_node, to_node):
         return self.weights.get(to_node, 1)
 
