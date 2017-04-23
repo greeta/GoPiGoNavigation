@@ -1,19 +1,22 @@
 import heapq
 
-class graph:
-    def __init__(self, width, height):
+class graph: # _new_=regularconst vs _init_ =+ add-on manip. before creat.
+    def __init__(self, width, height): 
         self.width = width
         self.height = height
-        self.walls = []
-        self.weights = {}
+        self.walls = []         # [] > list 
+        self.weights = {}       # {} > set - no dublicates 
 
+    #checks if any pair of x,y is within our map/limits
     def in_bounds(self, id):
         (x, y) = id
         return 0 <= x < self.width and 0 <= y < self.height
 
+    # checks and return true if param location has no obsticle on the way
     def passable(self, id):
         return id not in self.walls
 
+    # returns all available adjacent (x,y) --in map and no walls
     def neighbors(self, id):
         (x, y) = id
         results = [(x+1, y), (x, y-1), (x-1, y), (x, y+1)]
@@ -24,6 +27,7 @@ class graph:
 
     def cost(self, from_node, to_node):
         return self.weights.get(to_node, 1)
+
 
 class PriorityQueue:
     def __init__(self):
